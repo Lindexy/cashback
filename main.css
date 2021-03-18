@@ -1,5 +1,7 @@
 *{
-	color: red;
+	font-size: 25px;
+	margin: 0;
+	padding: 0;
 }
 body{
 	height: 100%;
@@ -9,27 +11,42 @@ body{
 header{
 	background: #FFFFFFFF;
 	width: 100%;
-	height: 100px;
 }
 .header_content{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	height: 100px;
+	width: 1200px;
 	margin: 0 auto;
-	width: 1400px;
-	display: inline-block;
-}
-.header__logo{
-	display: inline-block;
 }
 .header__text{
-	display: inline-block;
+	color: #FFD21EFF;
+	font-size: 40px;
+	font-weight: 600;
+}
+main{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 900px;
+}
+.main_content{
+	margin: 0 auto;
 }
 
+
+
 footer {
-	background: black;
+	text-align: center;
+	background: yellow;
 	position: absolute;
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	height: 80px;
+	padding: 20px 0px;
+
 }
 
 
