@@ -47,14 +47,15 @@ body{
 
 }
 .referal_text{
-	width: 600px;
+	width: 450px;
 	margin-right: 100px;
 }
 .referal_gif{
-	width: 600px;
+	width: 350px;
 }
 img{
-	width: 100%;
+	width: 200px;
+	height: 200px;
 }
 h1{
 	
@@ -68,9 +69,7 @@ h3{
 	margin-top: 30px;
 }
 
-a{
-	background: url(img/banner-letyshops.gif);
-}
+
 
 .base-timer {
   position: relative;
