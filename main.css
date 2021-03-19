@@ -3,28 +3,22 @@
 	margin: 0;
 	padding: 0;
 }
+html, body{
+overflow-x:hidden
+}
 body{
 	min-height: 100vh;
 	background: center no-repeat url(img/15766724456774.jpg);
 	background-size: cover;
 	font-family: 'Montserrat', sans-serif;
 }
-.logo{
-	color: #fcd31b;
-	font-size: 50px;
-}
-.header__logo{
-	margin-top: 30px;
-	font-family: 'Montserrat', sans-serif;
+header{
 	text-align: center;
-	font-size: 50px;
-	font-weight: 800;
 }
 
 .main_content{
 	margin: 0 auto;
 	color: white;
-	margin: 80px;
 }
 .redirect{
 	text-align: center;
@@ -36,38 +30,11 @@ body{
 	width: 100%;
 	margin-bottom: 20px;
 }
-.redirect__animation{
 
-}
 .referal{
 	margin-top: 50px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-
+	text-align: center;
 }
-.referal_text{
-	width: 450px;
-	margin-right: 100px;
-}
-.referal_gif{
-	width: 350px;
-}
-img{
-	width: 100%;
-}
-h1{
-	
-	font-size: 56px;
-	font-weight: 700;
-}
-h2{
-	margin-top: 30px;
-}
-h3{
-	margin-top: 30px;
-}
-
 
 
 .base-timer {
@@ -121,4 +88,13 @@ h3{
   align-items: center;
   justify-content: center;
   font-size: 48px;
+}
+@media (max-width: 549px) {
+	.main_img{
+		width: 100%;
+		height: auto;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
 }
