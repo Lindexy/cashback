@@ -1,5 +1,4 @@
 *{
-	font-size: 25px;
 	margin: 0;
 	padding: 0;
 }
@@ -15,7 +14,10 @@ body{
 header{
 	text-align: center;
 }
-
+.top_banner{
+	width: 728px;
+	height: 90px;
+}
 .main_content{
 	margin: 0 auto;
 	color: white;
@@ -29,6 +31,7 @@ header{
 .redirect__text{
 	width: 100%;
 	margin-bottom: 20px;
+	font-size: 25px;
 }
 
 .referal{
@@ -97,4 +100,33 @@ header{
 		left: 0;
 		bottom: 0;
 	}
+	.top_banner{
+		width: 100%;
+		height: auto;
+	}
+}
+@media (max-width: 350px) {
+	.main_img{
+		width: 100%;
+		height: auto;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+	.top_banner{
+		width: 100%;
+		height: auto;
+	}
+	.redirect__text{
+		font-size: 20px;
+	}
+	.base-timer__label{
+		font-size: 36px;
+		width: 100px;
+ 		height: 100px;
+	}
+	.base-timer {
+ 		width: 100px;
+ 		height: 100px;
+}
 }
