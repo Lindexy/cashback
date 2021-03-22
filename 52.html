@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+	<title>Document</title>
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="refresh" content="5;https://s.click.aliexpress.com/e/_AnWiZG" />
+	<!-- <link rel="stylesheet" type="text/css" href="main.css"> -->
+	<link rel="stylesheet" type="text/css" href="https://lindexy.github.io/cashback/main.css">
+</head>
+<body>
+	<header>
+		<!-- admitad.banner: syxcy06dj966249eeb7c8753afd1f1 Letyshops [lifetime] -->
+<a target="_blank" rel="nofollow" href="https://katuhus.com/g/syxcy06dj966249eeb7c8753afd1f1/?i=4"><img class="top_banner" src="https://ad.admitad.com/b/syxcy06dj966249eeb7c8753afd1f1/" alt="Letyshops [lifetime]"/></a>
+<!-- /admitad.banner -->
+	</header>
+	<main>
+		<div class="main_content">
+			<div class="redirect">
+				<div class="redirect__text">Автоматический переход на страницу товара через:</div>
+				<div class="redirect__animation" id="app"></div>
+			</div>
+			<div class="referal">
+				<!-- admitad.banner: 47orx4vx7566249eeb7c8753afd1f1 Letyshops [lifetime] -->
+<a target="_blank" rel="nofollow" href="https://homyanus.com/g/47orx4vx7566249eeb7c8753afd1f1/?i=4"><img class="main_img" width="549" height="420" border="0" src="https://ad.admitad.com/b/47orx4vx7566249eeb7c8753afd1f1/" alt="Letyshops [lifetime]"/></a>
+<!-- /admitad.banner -->
+			</div>
+		</div>
+	</main>
+
+	
+</body>
+	<script type="text/javascript">
+
+		const FULL_DASH_ARRAY = 283;
+		const WARNING_THRESHOLD = 4;
+		const ALERT_THRESHOLD = 2;
+
+		const COLOR_CODES = {
+		  info: {
+		    color: "green"
+		  },
+		  warning: {
+		    color: "orange",
+		    threshold: WARNING_THRESHOLD
+		  },
+		  alert: {
+		    color: "red",
+		    threshold: ALERT_THRESHOLD
+		  }
+		};
+
+		const TIME_LIMIT = 5;
+		let timePassed = 0;
+		let timeLeft = TIME_LIMIT;
+		let timerInterval = null;
+		let remainingPathColor = COLOR_CODES.info.color;
+
+		document.getElementById("app").innerHTML = `
+		<div class="base-timer">
+		  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+		    <g class="base-timer__circle">
+		      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+		      <path
+		        id="base-timer-path-remaining"
+		        stroke-dasharray="283"
+		        class="base-timer__path-remaining ${remainingPathColor}"
+		        d="
+		          M 50, 50
+		          m -45, 0
+		          a 45,45 0 1,0 90,0
+		          a 45,45 0 1,0 -90,0
+		        "
+		      ></path>
+		    </g>
+		  </svg>
+		  <span id="base-timer-label" class="base-timer__label">${formatTime(
+		    timeLeft
+		  )}</span>
+		</div>
+		`;
+
+		startTimer();
+
+		function onTimesUp() {
+		  clearInterval(timerInterval);
+		}
+
+		function startTimer() {
+		  timerInterval = setInterval(() => {
+		    timePassed = timePassed += 1;
+		    timeLeft = TIME_LIMIT - timePassed;
+		    document.getElementById("base-timer-label").innerHTML = formatTime(
+		      timeLeft
+		    );
+		    setCircleDasharray();
+		    setRemainingPathColor(timeLeft);
+
+		    if (timeLeft === 0) {
+		      onTimesUp();
+		    }
+		  }, 1000);
+		}
+
+		function formatTime(time) {
+		  const minutes = Math.floor(time / 60);
+		  let seconds = time % 60;
+
+		  if (seconds < 10) {
+		    seconds = `0${seconds}`;
+		  }
+
+		  return `${minutes}:${seconds}`;
+		}
+
+		function setRemainingPathColor(timeLeft) {
+		  const { alert, warning, info } = COLOR_CODES;
+		  if (timeLeft <= alert.threshold) {
+		    document
+		      .getElementById("base-timer-path-remaining")
+		      .classList.remove(warning.color);
+		    document
+		      .getElementById("base-timer-path-remaining")
+		      .classList.add(alert.color);
+		  } else if (timeLeft <= warning.threshold) {
+		    document
+		      .getElementById("base-timer-path-remaining")
+		      .classList.remove(info.color);
+		    document
+		      .getElementById("base-timer-path-remaining")
+		      .classList.add(warning.color);
+		  }
+		}
+
+		function calculateTimeFraction() {
+		  const rawTimeFraction = timeLeft / TIME_LIMIT;
+		  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+		}
+
+		function setCircleDasharray() {
+		  const circleDasharray = `${(
+		    calculateTimeFraction() * FULL_DASH_ARRAY
+		  ).toFixed(0)} 283`;
+		  document
+		    .getElementById("base-timer-path-remaining")
+		    .setAttribute("stroke-dasharray", circleDasharray);
+		}
+
+	</script>
+</html>
+
+
